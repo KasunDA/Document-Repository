@@ -1,4 +1,4 @@
-		<div class="container" id = "webcontent">
+
 			<div class="row clearfix">
 				<div class="col-md-12 column">
 					<?php if (isset($result[0]->name)) {?>
@@ -62,8 +62,3 @@
 				</div>
 			</div>
 
-	</div>
-		<!-- jQuery -->
-	<script src="//code.jquery.com/jquery.js"></script>
-	<!-- Bootstrap JavaScript -->
-	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>

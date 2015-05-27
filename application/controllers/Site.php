@@ -3,9 +3,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Site extends CI_Controller {
 
+
+	function __construct()
+	{
+		parent::__construct();
+		$this->load->helper(array('url', 'form'));
+
+	}
+
 	public function index2()
 	{
-		$this->load->helper('url');
 		$keyword = $this->input->get('keyword');
 		if ($keyword!=""){
 			$this->load->model('get_books');
@@ -19,21 +26,19 @@ class Site extends CI_Controller {
 	}
 
 
+
 	public function about()
 	{
-		$this->load->helper('url');
 		$this->load->view('about');
 	}
 
 	public function book_add()
 	{
-		$this->load->helper('url');
 		$this->load->view('book_add');
 	}
 
-	public function index()
+	public function search()
 	{
-		$this->load->helper('url');
 		$keyword = $this->input->get('keyword');
 		if ($keyword!=""){
 			$this->load->model('get_books');
@@ -51,6 +56,18 @@ class Site extends CI_Controller {
 
 
 	}
+
+	public function index()
+	{
+		$this->load->view('page_header');
+		$this->load->view('homepage');
+		$this->load->view('page_footer');
+	}
+
+
+	public function test(){
+		$this->load->view('test');
+	}
 	
 	public function testjs()
 	{
@@ -66,6 +83,7 @@ class Site extends CI_Controller {
 		$this->db->insert('books', $data); 
 		echo 'Success!';
 	}
+
 
 }
 
