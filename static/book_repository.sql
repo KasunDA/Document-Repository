@@ -78,7 +78,7 @@ CREATE TABLE IF NOT EXISTS `tbl_usrs` (
 `id` int(8) NOT NULL,
   `username` varchar(30) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `password` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `email` varchar(60) CHARACTER SET utf16 COLLATE utf16_unicode_ci NOT NULL,
+  `email` varchar(60) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `status` varchar(8) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
