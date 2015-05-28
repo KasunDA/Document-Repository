@@ -5,12 +5,41 @@
         <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro|Open+Sans+Condensed:300|Raleway' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" type="text/css" media="all" href="<?php echo base_url('static/css/stylesheet.css'); ?>" />
         <link href="<?php echo base_url('static/css/bootstrap.min.css'); ?>" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" media="all" href="<?php echo base_url('static/css/styletest.css'); ?>" />
     </head>
     <body>
         <!-- jQuery -->
         <script src="<?php echo base_url('static/js/jquery.js'); ?>"></script>
         <!-- Bootstrap JavaScript -->
         <script src="<?php echo base_url('static/js/bootstrap.min.js'); ?>"></script>
+        <!--Custom JS -->
+        <script src="<?php echo base_url('static/js/custom.js'); ?>"></script>
+
+                <div id="login-box" class="login-popup">
+        <a href="#" class="close"><img src="<?php echo base_url('static/images/close_pop.png'); ?>" class="btn_close" title="Close Window" alt="Close" /></a>
+          <form method="post" class="signin" action="#">
+                <fieldset class="textbox">
+                <label class="username">
+                <span>Username or email</span>
+                <input id="username" name="username" value="" type="text" autocomplete="on" placeholder="Username">
+                </label>
+                
+                <label class="password">
+                <span>Password</span>
+                <input id="password" name="password" value="" type="password" placeholder="Password">
+                </label>
+                
+                <button class="submit button" type="button">Sign in</button>
+                
+                <p>
+                <a class="forgot" href="#">Forgot your password?</a>
+                </p>
+                
+                </fieldset>
+          </form>
+        </div>
+
+        <div class="container" id = "webheader">
 
         <nav class="navbar navbar-default navbar-fixed-top" >
             <div class="container">
@@ -53,7 +82,7 @@
                                 }
                                 else{
                                     echo "<li><a href='".base_url('index.php/auth/signup')."'><b><span class='glyphicon glyphicon-user'></span> Sign Up</b></a></li>";
-                                    echo "<li><a href='".base_url('index.php/auth')."'><b><span class='glyphicon glyphicon-log-in'></span> Login</b></a></li>";
+                                    echo "<li><a href='#login-box' class='login-window'><b><span class='glyphicon glyphicon-log-in' id = 'login_link'></span> Login</b></a></li>";
                                 }
                             ?>
                         </a></li>
@@ -62,8 +91,6 @@
                 
             </div>
         </nav>
-
-        <div class="container" id = "webheader">
 
         <div id="carousel-example" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">

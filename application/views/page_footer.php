@@ -15,7 +15,5 @@
                     <a href=""><img src="http://www.main-hosting.com/hostinger/welcome/images/twitter.gif" /></a>
                 </div> -->
             </div>
-	
-
 </body>
 </html>
