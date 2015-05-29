@@ -6,6 +6,7 @@
         <link rel="stylesheet" type="text/css" media="all" href="<?php echo base_url('static/css/stylesheet.css'); ?>" />
         <link href="<?php echo base_url('static/css/bootstrap.min.css'); ?>" rel="stylesheet">
         <link rel="stylesheet" type="text/css" media="all" href="<?php echo base_url('static/css/styletest.css'); ?>" />
+        <title>Document Repository</title>
     </head>
     <body>
         <!-- jQuery -->

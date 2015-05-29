@@ -28,7 +28,10 @@ p.description {
     -moz-border-radius: 10px 10px 10px 10px;
     -webkit-border-radius: 10px 10px 10px 10px;
     border: 0px solid #000000;
-    min-height: 200px;
+/*    min-height: 200px;*/
+    min-height: -moz-calc(100% - 75px); /* Firefox */
+    min-height: -webkit-calc(100% - 75px); /* Chrome, Safari */
+    min-height: calc(100% - 75px); /* IE9+ and future browsers */
 }
 
 #header {
