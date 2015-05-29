@@ -35,7 +35,8 @@ class auth extends CI_Controller
           if ($this->form_validation->run() == FALSE)
           {
                //validation fails
-               $this->load->view('login');
+               $this->session->set_flashdata('msg', '<div class="feedback">Enter username and password<br/>and login again...</div>');
+               redirect('auth/index');
           }
           else
           {

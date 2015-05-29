@@ -31,7 +31,7 @@
                         <li><a href="contact.html">CONTACT</a></li>
                         <li>                        
                             <div id = "search">
-                                <form action="index.php/site/search" method="GET" role="form" class="navbar-form">
+                                <form action="<?php echo base_url('index.php/site/search');?>" method="GET" role="form" class="navbar-form">
                                     <div class="input-group">
                                         <input type="text" name = "keyword" class="form-control" id="keyword" placeholder="Search a document..."/>
                                         <span class="input-group-btn">

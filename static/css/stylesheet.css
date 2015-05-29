@@ -252,12 +252,14 @@ img.btn_close {
 }
 
 
-#authbox {
+#auth_box {
     opacity: 0.8;
     border-radius: 10px 10px 10px 10px;
     -moz-border-radius: 10px 10px 10px 10px;
     -webkit-border-radius: 10px 10px 10px 10px;
     border: 0px solid #000000;
-    min-height: 100%;
+    height: -moz-calc(100% - 75px); /* Firefox */
+    height: -webkit-calc(100% - 75px); /* Chrome, Safari */
+    height: calc(100% - 75px); /* IE9+ and future browsers */
     position:relative;
 }
