@@ -17,8 +17,8 @@ class auth extends CI_Controller
      }
 
      public function index(){
-          $this->load->view('page_header');
-          $this->load->view('login');
+          $this->load->view('page_navi');
+          $this->load->view('authentication');
           $this->load->view('page_footer');
      }
 
@@ -56,7 +56,7 @@ class auth extends CI_Controller
                     }
                     else
                     {
-                         $this->session->set_flashdata('msg', '<div class="alert alert-danger text-center">Invalid username and password!</div>');
+                         $this->session->set_flashdata('msg', '<div class="feedback">Wrong username or password<br/>Please login again...</div>');
                          redirect('auth/index');
                     }
                }

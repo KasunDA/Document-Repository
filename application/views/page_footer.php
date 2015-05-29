@@ -1,4 +1,4 @@
-    </div>
+
             <div id="footer">
                 <div class="links">
                     <a href="http://www.phuctrancs.info" target="_blank">Website</a> 

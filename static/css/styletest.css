@@ -1,117 +1,121 @@
-/* Mask for background, by default is not display */
-#mask {
-    display: none;
-    background: #000;
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: 10;
-    width: 100%;
-    height: 100%;
-    opacity: 0.8;
-    z-index: 999;
+* {
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
-
-/* You can customize to your needs  */
-.login-popup {
-    width: 500px;
-    display: none;
-    background: #ecf0f1;
-    padding: 10px;
-    border: 2px solid #ddd;
-    float: left;
-    font-size: 1.2em;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    z-index: 99999;
-    box-shadow: 0px 0px 20px #999;
-    /* CSS3 */
-        -moz-box-shadow: 0px 0px 20px #999;
-    /* Firefox */
-        -webkit-box-shadow: 0px 0px 20px #999;
-    /* Safari, Chrome */
-	border-radius: 3px 3px 3px 3px;
-    -moz-border-radius: 3px;
-    /* Firefox */
-        -webkit-border-radius: 3px;
-    /* Safari, Chrome */;
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background: url(http://subtlepatterns.com/patterns/sativa.png) repeat fixed;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 200;
 }
-
-img.btn_close {
-    Position the close button
-	float: right;
-    margin: -28px -28px 0 0;
+.login {
+  position: relative;
+  top: 50%;
+  width: 250px;
+  display: table;
+  margin: -150px auto 0 auto;
+  background: #fff;
+  border-radius: 4px;
 }
-
-fieldset {
-    border: none;
+.legend {
+  position: relative;
+  width: 100%;
+  display: block;
+  background: #FF7052;
+  padding: 15px;
+  color: #fff;
+  font-size: 20px;
 }
-
-form.signin .textbox label {
-    display: block;
-    padding-bottom: 7px;
+.legend:after {
+  content: "";
+  background-image: url(http://simpleicon.com/wp-content/uploads/multy-user.png);
+  background-size: 100px 100px;
+  background-repeat: no-repeat;
+  background-position: 152px -16px;
+  opacity: 0.06;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
 }
-
-form.signin .textbox span {
-    display: block;
+.input {
+  position: relative;
+  width: 90%;
+  margin: 15px auto;
 }
-
-form.signin p, form.signin span {
-    color: #999;
-    font-size: 11px;
-    line-height: 18px;
+.input span {
+  position: absolute;
+  display: block;
+  color: #d4d4d4;
+  left: 10px;
+  top: 8px;
+  font-size: 20px;
 }
-
-form.signin .textbox input {
-    background: #666666;
-    border-bottom: 1px solid #333;
-    border-left: 1px solid #000;
-    border-right: 1px solid #333;
-    border-top: 1px solid #000;
-    color: #fff;
-    border-radius: 3px 3px 3px 3px;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
-    font: 13px Arial, Helvetica, sans-serif;
-    padding: 6px 6px 4px;
-    width: 200px;
+.input input {
+  width: 100%;
+  padding: 10px 5px 10px 40px;
+  display: block;
+  border: 1px solid #EDEDED;
+  border-radius: 4px;
+  transition: 0.2s ease-out;
+  color: #a1a1a1;
 }
-
-form.signin input:-moz-placeholder {
-    color: #bbb;
-    text-shadow: 0 0 2px #000;
+.input input:focus {
+  padding: 10px 5px 10px 10px;
+  outline: 0;
+  border-color: #FF7052;
 }
-
-form.signin input::-webkit-input-placeholder {
-    color: #bbb;
-    text-shadow: 0 0 2px #000;
+.submit {
+  width: 45px;
+  height: 45px;
+  display: block;
+  margin: 0 auto -15px auto;
+  background: #fff;
+  border-radius: 100%;
+  border: 1px solid #FF7052;
+  color: #FF7052;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0px 0px 0px 7px #fff;
+  transition: 0.2s ease-out;
 }
-
-/*.button {
-    background: -moz-linear-gradient(center top, #f3f3f3, #dddddd);
-    background: -webkit-gradient(linear, left top, left bottom, from(#f3f3f3), to(#dddddd));
-    background: -o-linear-gradient(top, #f3f3f3, #dddddd);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#f3f3f3', EndColorStr='#dddddd');
-    border-color: #000;
-    border-width: 1px;
-    border-radius: 4px 4px 4px 4px;
-    -moz-border-radius: 4px;
-    -webkit-border-radius: 4px;
-    color: #333;
-    cursor: pointer;
-    display: inline-block;
-    padding: 6px 6px 4px;
-    margin-top: 10px;
-    font: 12px;
-    width: 214px;
-}*/
-
-.button:hover {
-    background: #ddd;
+.submit:hover,
+.submit:focus {
+  background: #FF7052;
+  color: #fff;
+  outline: 0;
 }
-
-#login_box {
-    width: 300px;
-    height:200px;
+.feedback {
+  position: absolute;
+  bottom: -80px;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  background: #e74c3c;
+  padding: 10px 0;
+  font-size: 12px;
+/*  display: none;*/
+  opacity: 1;
+}
+.feedback:before {
+  bottom: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: "";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(46, 204, 113, 0);
+  border-bottom-color: #e74c3c;
+  border-width: 10px;
+  margin-left: -10px;
 }

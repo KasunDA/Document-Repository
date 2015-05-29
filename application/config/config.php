@@ -17,7 +17,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | environments.
 |
 */
-$config['base_url'] = 'http://localhost:8888/docs';
+$config['base_url'] = 'http://10.16.0.106:8888/docs';
 
 /*
 |--------------------------------------------------------------------------

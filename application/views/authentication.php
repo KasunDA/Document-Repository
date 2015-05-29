@@ -1,15 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Bootstrap Case</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" media="all" href="<?php echo base_url('static/css/styletest.css'); ?>" />
-  </head>
-  <body>
+    <div class="container" id = 'auth_box'>
     <script src="<?php echo base_url('static/js/custom.js'); ?>"></script>
       <?php $attributes = array("class" => "login", "id" => "loginform", "name" => "loginform");
       echo form_open("auth/login", $attributes);?>
@@ -31,11 +20,6 @@
         
       </fieldset>
       
-      <div class="feedback">
-        login successful <br />
-        redirecting...
-      </div>
-      <?php echo form_close(); ?>
       <?php echo $this->session->flashdata('msg'); ?>
-    </body>
-  </html>
+      <?php echo form_close(); ?>
+</div>     

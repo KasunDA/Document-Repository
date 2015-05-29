@@ -44,11 +44,13 @@ class Site extends CI_Controller {
 			$this->load->model('get_books');
 			$data['result'] = $this->get_books->getAll($keyword);
 			$data['cate'] = $this->get_books->getCategory(1);
+			$this->load->view('page_navi');
 			$this->load->view('page_header');
 			$this->load->view('page_content', $data);
 			$this->load->view('page_footer');
 		}
 		else {
+			$this->load->view('page_navi');
 			$this->load->view('page_header');
 			$this->load->view('page_content');
 			$this->load->view('page_footer');
@@ -59,6 +61,7 @@ class Site extends CI_Controller {
 
 	public function index()
 	{
+		$this->load->view('page_navi');
 		$this->load->view('page_header');
 		$this->load->view('homepage');
 		$this->load->view('page_footer');

@@ -20,8 +20,10 @@ $(document).ready(function() {
 		$('body').append('<div id="mask"></div>');
 		$('#mask').fadeIn(300);
 		
+
 		return false;
 	});
+
 	
 	// When clicking on the button close or the mask layer the popup closed
 	$('a.close, #mask').on('click', function() { 
@@ -30,4 +32,27 @@ $(document).ready(function() {
 	}); 
 	return false;
 	});
+
+
+	$( ".input" ).focusin(function() {
+  $( this ).find( "span" ).animate({"opacity":"0"}, 200);
 });
+
+$( ".input" ).focusout(function() {
+  $( this ).find( "span" ).animate({"opacity":"1"}, 300);
+});
+
+// $(".login").submit(function(){
+//   $(this).find(".submit i").removeAttr('class').addClass("fa fa-check").css({"color":"#fff"});
+//   $(".submit").css({"background":"#2ecc71", "border-color":"#2ecc71"});
+//   $(".feedback").show().animate({"opacity":"1", "bottom":"-80px"}, 400);
+//   $("input").css({"border-color":"#2ecc71"});
+//   return false;
+// });
+
+
+});
+
+
+
+
