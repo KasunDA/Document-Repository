@@ -255,7 +255,18 @@ img.btn_close {
 }
 
 
-#auth_box {
+#auth_box_signup {
+    opacity: 0.8;
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border: 0px solid #000000;
+    min-height: -moz-calc(100% - 75px); /* Firefox */
+    min-height: -webkit-calc(100% - 75px); /* Chrome, Safari */
+    min-height: calc(100% - 75px); /* IE9+ and future browsers */
+}
+
+#auth_box_login {
     opacity: 0.8;
     border-radius: 10px 10px 10px 10px;
     -moz-border-radius: 10px 10px 10px 10px;
@@ -264,5 +275,5 @@ img.btn_close {
     height: -moz-calc(100% - 75px); /* Firefox */
     height: -webkit-calc(100% - 75px); /* Chrome, Safari */
     height: calc(100% - 75px); /* IE9+ and future browsers */
-    position:relative;
+
 }

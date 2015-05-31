@@ -51,7 +51,46 @@ $( ".input" ).focusout(function() {
 // });
 
 
+
+
+
 });
+
+
+
+function checkpass(){
+	var pass1 = document.getElementById('txt_password');
+    var pass2 = document.getElementById('txt_repassword');
+    pass1.style.backgroundRepeat =  'no-repeat';
+    pass1.style.backgroundPosition = 'center right 6px';
+   	pass2.style.backgroundRepeat =  'no-repeat';
+    pass2.style.backgroundPosition = 'center right 6px';
+
+    if (pass1.value == null || pass1.value == '')
+    {
+        pass1.style.backgroundImage = 'url(http://localhost:8888/Document-Repository/static/images/error.png)';
+        pass2.style.backgroundImage = 'url(http://localhost:8888/Document-Repository/static/images/error.png)';
+    }
+    else 
+    {
+        pass1.style.backgroundImage = 'url(http://localhost:8888/Document-Repository/static/images/valid.png)';
+        if (pass1.value == pass2.value)
+        {
+        	pass2.style.backgroundImage = 'url(http://localhost:8888/Document-Repository/static/images/valid.png)';
+        }
+        else
+        {
+        	pass2.style.backgroundImage = 'url(http://localhost:8888/Document-Repository/static/images/error.png)';
+
+        }
+    }
+}
+
+
+
+
+
+
 
 
 

@@ -43,10 +43,10 @@
                             </div>
                         </li>                  
                             <?php 
-                                $user = $this->session->userdata('username');
-                                if ($user!=''){
+                                $usr_name = $this->session->userdata('name');
+                                if ($usr_name!=''){
                                     echo "<li class = 'dropdown'>
-                                            <a class='dropdown-toggle' data-toggle='dropdown' href='#'>".$user."
+                                            <a class='dropdown-toggle' data-toggle='dropdown' href='#'><b>".$usr_name."</b>
                                             <span class='caret'></span></a>
                                             <ul class='dropdown-menu'>
                                                 <li><a href='#'>My Account</a></li>
