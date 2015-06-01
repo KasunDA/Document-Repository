@@ -2,14 +2,6 @@
   <script type="text/javascript">
   var baseurl = "<?php print base_url(); ?>";
   </script>
-  <script src="<?php echo base_url('static/js/custom.js'); ?>"></script>
-
-  <script>
-    addEventListener('load', prettyPrint, false);
-    $(document).ready(function(){
-    $('pre').addClass('prettyprint linenums');
-      });
-    </script> 
 
   <?php $attributes = array("class" => "signup", "id" => "signup_form", "name" => "signup_form", "onsubmit" => "return validateForm()");
   echo form_open("auth/signup", $attributes);?>
@@ -19,7 +11,7 @@
     <a id = "error_msg"></a>
 
     <div class="input">
-      <input style = "width:100%;" type="text" name="txt_name" placeholder="Display Name" required />
+      <input style = "width:100%;" type="text" name="txt_name" id = "txt_name" placeholder="Display Name" required />
       <span><i class="fa fa-envelope-o"></i></span>
     </div>
     <div class="input">
@@ -28,8 +20,8 @@
     </div>
     
     <div class="input">
-      <input type="password" placeholder="Password" name="txt_password" id = "txt_password" onblur = 'checkpass()' required />
-      <input style = "float: right" type="password" placeholder="Retype Password" name="txt_repassword" id= "txt_repassword" onblur="checkpass()" required />
+      <input type="password" placeholder="Password" name="txt_password" id = "txt_password" required />
+      <input style = "float: right" type="password" placeholder="Retype Password" name="txt_repassword" id= "txt_repassword" required />
       <span><i class="fa fa-envelope-o"></i></span>
     </div>
     <div class="input">

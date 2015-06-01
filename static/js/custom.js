@@ -1,6 +1,6 @@
 $(document).ready(function() {
+
 	$('a.login-window').click(function() {
-		
 		// Getting the variable's value from a link 
 		var loginBox = $(this).attr('href');
 
@@ -19,7 +19,6 @@ $(document).ready(function() {
 		// Add the mask to body
 		$('body').append('<div id="mask"></div>');
 		$('#mask').fadeIn(300);
-		
 
 		return false;
 	});
@@ -50,8 +49,48 @@ $( ".input" ).focusout(function() {
 //   return false;
 // });
 
+$("#txt_name").blur(function(){
+	var txt_len = $(this).val().length;
+	if (txt_len < 5){
+		var imageurl = "url(".concat(baseurl, "static/images/error.png)");
+		$(this).css({"background-repeat": "no-repeat", "background-position": "center right 6px", "background-image": });
+	}
+	else {
+		$(this).css({"background-repeat": "no-repeat", "background-position": "center right 6px", "background-image": "url(".concat(baseurl, "static/images/valid.png)")});
+	}
+});
 
 
+$("#txt_password, #txt_repassword").blur(function(){
+	$("#txt_password").css({"background-repeat": "no-repeat", "background-position": "center right 6px"});
+	$("#txt_repassword").css({"background-repeat": "no-repeat", "background-position": "center right 6px"});
+	var pass1 = $("#txt_password").val();
+	var pass2 = $("#txt_repassword").val();
+
+	if (pass1 == null || pass1 == '')
+    {
+    	imageurl = "url(".concat(baseurl, "static/images/error.png)");
+        $("txt_password").css("background-image": imageurl);
+        $("txt_repassword").css("background-image": imageurl);
+    }
+    else 
+    {
+    	imageurl = "url(".concat(baseurl, "static/images/valid.png)");
+        $("txt_password").css("background-image": imageurl);
+
+        if (pass1 == pass2)
+        {
+        	$("txt_repassword").css("background-image": imageurl);
+        }
+        else
+        {
+        	imageurl = "url(".concat(baseurl, "static/images/error.png)");
+        	$("txt_repassword").css("background-image": imageurl);
+
+        }
+    }
+
+});
 
 
 });
@@ -66,21 +105,26 @@ function checkpass(){
    	pass2.style.backgroundRepeat =  'no-repeat';
     pass2.style.backgroundPosition = 'center right 6px';
 
+
     if (pass1.value == null || pass1.value == '')
     {
-        pass1.style.backgroundImage = 'url(http://localhost:8888/Document-Repository/static/images/error.png)';
-        pass2.style.backgroundImage = 'url(http://localhost:8888/Document-Repository/static/images/error.png)';
+
+    	imageurl = "url(".concat(baseurl, "static/images/error.png)");
+        pass1.style.backgroundImage = imageurl;
+        pass2.style.backgroundImage = imageurl;
     }
     else 
     {
-        pass1.style.backgroundImage = 'url(http://localhost:8888/Document-Repository/static/images/valid.png)';
+    	imageurl = "url(".concat(baseurl, "static/images/valid.png)");
+        pass1.style.backgroundImage = imageurl;
         if (pass1.value == pass2.value)
         {
-        	pass2.style.backgroundImage = 'url(http://localhost:8888/Document-Repository/static/images/valid.png)';
+        	pass2.style.backgroundImage = imageurl;
         }
         else
         {
-        	pass2.style.backgroundImage = 'url(http://localhost:8888/Document-Repository/static/images/error.png)';
+        	imageurl = "url(".concat(baseurl, "static/images/error.png)");
+        	pass2.style.backgroundImage = imageurl;
 
         }
     }
